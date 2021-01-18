@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <style>
-        h1 {color:blue}
-    </style>
-    <title>Hello</title>
-</head>
-<body>
-    <h1>Welcome bro!!!</h1>
-    Hello  my name is Alejandro
-    <h2>is this it?</h2>
-    <h3>maybe maybe maybe</h3>
-</body>
+    <head>
+        <title>Search</title>
+        <style>
+            body{font-family:arial, sans-serif;}
+            div{display:block;}
+
+            #logo{
+                display:block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 80px;
+            }
+            #upl{
+                text-align: right;
+                margin-top: 25px;
+                margin-right: 30px;
+                font-size: 13px;
+            }
+            .links{
+                margin-right: 20px;
+                color: black;
+                text-decoration:none;
+            }
+            .links:hover{text-decoration-line:underline;}
+
+            #search {text-align: center;}
+
+            @media (min-width: 650px) {#searchbar {width:500px;}}
+            @media (max-width: 649px) {#searchbar {width:75%;}}
+            #searchbar {
+                border: 1px solid rgb(202, 203, 209);
+                border-radius: 120px;
+                background-color: white;
+                background-image: url('C:/Users/Ale/Desktop/cs50/project0/searchicon.png');
+                background-position: 5px 7px; 
+                background-repeat: no-repeat;
+                padding: 12px 50px;
+                outline:none;
+                font-size: 16px;
+            }
+            #searchbar:hover, #searchbar:focus {
+                border: 1px solid rgba(134, 133, 139);
+                background-color: white;
+            }
+            .searchbttn {
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                color: #3c4043;
+                font-size: 14px;
+                margin: 11px 4px;
+                padding: 0 16px;
+                height: 36px;
+                text-align: center;
+                outline:none;
+                cursor:pointer;
+            }
+            .searchbttn:hover {border: 1px solid rgba(134, 133, 139, 0.267);}
+            .searchbttn:focus {border: 1px solid rgb(4, 155, 243);}
+        </style>
+    </head>
+    
+    <body>
+
+        <div id="upl">
+            <a class="links" href="C:/Users/Ale/Desktop/cs50/project0/advanced_search.html">Advanced Search</a>
+            <a class="links" href="C:/Users/Ale/Desktop/cs50/project0/image_search.html">Image Search</a>
+        </div>
+
+        <img id="logo" alt="Google" src="googlelogo.png"><br>
+
+        <form action = "https://google.com/search" autocomplete = "off">
+            <div id="search">
+                <input id="searchbar" type="text" name="q"><br><br>
+                <input class="searchbttn" type="submit" value="Google Search">
+                <input class="searchbttn" type ="submit" value = "I'm Feeling Lucky" name="btnI">
+            </div>
+        </form>
+    </body>
 </html>

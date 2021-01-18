@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Advanced Search</title>
+
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        div {
+            display: block;
+        }
+        #upl {
+            background: #f1f1f1;
+            height: 50px;
+            width: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+        #head {
+            margin-top: 85px;
+            margin-left: 40px;
+            height: 50px;
+            color: #d93025;
+            font-size: 20px;
+        }
+        #advsearch {margin-top: 50px;}
+        #line {border-bottom: 1px solid #ebebeb;}
+
+        #searchbar {
+            width: 40%;
+            text-align: left;
+            border-radius: 1px;
+            border: 1px solid #d9d9d9;
+            border-top: 1px solid #c0c0c0;
+            font-size: 13px;
+            height: 25px;
+            padding: 1px 8px;
+            font: 13px;
+            outline: none;
+            left: 210px;
+            position: absolute;
+        }
+        #searchbar:focus {
+            border: 1px solid rgb(64, 179, 224);
+        }
+        .search{
+            width: 40%;
+            text-align: right;
+            left: 226px;
+            position: absolute;
+        }
+        .searchbttn {
+            height: 30px;
+            width: 120px;
+            background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+            border: 1px solid #3079ed;
+            color: #fff;
+            border-radius: 2px;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            cursor:initial;
+            outline:none;
+        }
+        .searchbttn:hover {background-image: -webkit-linear-gradient(top,#376dc4,#3e7ada);border: 1px solid #1f52a385}
+        .searchbttn:active {background-image: -webkit-linear-gradient(top,#305fac,#3971cc);border: 1px solid #16387085}
+        .desc{
+            display: inline-block;
+            min-width: 167px;
+            height: 42px;
+            color: #222;
+            font-size: 13px;
+            padding-left: 40px;
+            padding-top: 5px
+        }
+        #main{font-size: 16px;color: #333;}
+    </style>
+</head>
+
+<body>
+    <div id="upl"> 
+        <a href="C:/Users/Ale/Desktop/cs50/project0/index.html">
+            <img src="C:/Users/Ale/Desktop/cs50/project0/googlehome.png" alt="Google Home">
+        </a>
+    </div>
+
+    <div id="head"><label>Advanced Search</label></div>
+    <div id="line"></div>
+
+    <form id="advsearch" action="https://google.com/search">
+        <label class="desc" id="main">Find pages with...</label><br>
+
+        <label class="desc">all these words:</label>
+        <input id="searchbar" type="text" name="as_q"><br>
+
+        <label class="desc">this exact word or phrase:</label>
+        <input id="searchbar" type="text" name="as_epq"><br>
+
+        <label class="desc">any of these words:</label>
+        <input id="searchbar" type="text" name="as_oq"><br>
+
+        <label class="desc">none of these words:</label>
+        <input id="searchbar" type="text" name="as_eq"><br>
+
+        <div class="search"><input class="searchbttn" type="submit" value="Advanced Search"></div>
+
+    </form>
+</body>
+
+</html>
