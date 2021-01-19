@@ -30,12 +30,24 @@
                 50%  {left:100px; top:200px;}
                 75%  {left:-100px; top:200px;}
                 100% {left:-100px; top:0px;}
-}
-                #logo:hover {
-                width: 480px;
-                height: 400px;
                 }
-
+                #logo:hover {
+                width: 900px;
+                height: 800px;
+                }
+                #news{
+                    font-size: xx-large;
+                    text-align: center;
+                    animation-name: mytext;
+                    animation-duration: 10s;
+                    animation-timing-function: linear;
+                    
+                }
+                @keyframes mytext{
+                0%  {font-size: 0;}
+                100%{font-size: xx-large;}
+                }
+                
         </style>
     </head>
     
@@ -49,6 +61,7 @@
         </div>
         <p style="text-align: center;">Toca al Señor Búo!!</p>
         <p style="text-align: center;"></p><br>
-        <p style="text-align: center;">Pues qué adivinaaaa</p>
+        <div id="news" >No me la vas a creeer...</div>
+
     </body>
 </html>
