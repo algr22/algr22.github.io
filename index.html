@@ -17,29 +17,38 @@
                 margin-right: auto;
                 margin-top: 80px;
                 text-align: center;
+                position: relative;
                 height:100px;
                 width: 120px;
-                transition-duration: 1s;
-                transition-timing-function: linear;
+                transition-duration: 0.5s;
+                transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+                animation: myfirst 5s linear infinite alternate;
                 }
-
+                @keyframes myfirst {
+                0%   {left:-100px; top:0px;}
+                25%  {left:100px; top:0px;}
+                50%  {left:100px; top:200px;}
+                75%  {left:-100px; top:200px;}
+                100% {left:-100px; top:0px;}
+}
                 #logo:hover {
-                width: 360px;
-                height: 300px;
+                width: 480px;
+                height: 400px;
                 }
 
         </style>
     </head>
     
     <body>
+        <h1 style="color: darkblue; text-align: center;">Bienvenida a mi sitio web!!!</h1>
             <img id= "logo" src="googlelogo.png" alt="google">
         <div id= "logo" >
             <audio autoplay loop>
-                <source src="grabacion.mp3" type="audio/mpeg">
+                <source src="grabacions.mp3" type="audio/mpeg">
               </audio>
         </div>
         <p style="text-align: center;">Toca al Señor Búo!!</p>
-        <p style="text-align: center;"></p>
+        <p style="text-align: center;"></p><br>
         <p style="text-align: center;">Pues qué adivinaaaa</p>
     </body>
 </html>
